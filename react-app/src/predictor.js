@@ -45,7 +45,7 @@ const heatmap = [
 
 function Predictor() {
 
-    let prediction =
+
 
     let handleOnChange = (values) => {
         setCurrMin(values.minValue)
