@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fe209492-ae8f-4ff4-a642-b56e5785f25a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/flask-app/ML/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/flask-app/ML/preprocess.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -22,7 +20,12 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "last_opened_file_path": "/Users/jackwebster/Desktop/browncs/Courses/DataScience/crime-predictor-interactive-site/flask-app"
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "/Users/jackwebster/Desktop/browncs/Courses/DataScience/crime-predictor-interactive-site/flask-app",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -39,6 +42,7 @@
       <option name="presentableId" value="Default" />
       <updated>1651770679062</updated>
       <workItem from="1651770681264" duration="1862000" />
+      <workItem from="1652125973226" duration="462000" />
     </task>
     <servers />
   </component>

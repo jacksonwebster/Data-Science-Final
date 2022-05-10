@@ -11,6 +11,7 @@ from sklearn.model_selection import cross_val_score
 from numpy import mean
 from numpy import std
 import pickle
+import joblib
 
 TEST_SIZE = 0.3
 
@@ -39,20 +40,20 @@ def get_trained_model(data):
     print(train_df)
 
     # Save model for interactive portion
-    pickle.dump(model, open("MLPRegressorModel", 'wb'))
-
     model.fit(train_df[feature_names], train_df["count"])
+    pickle.dump(model, open("MLPRegressorModel", 'wb'))
 
     return model, ohe, train_df, test_df, feature_names
 
+
 def predict_for_interactive(min_temp, max_temp):
     loaded_model = pickle.load(open("MLPRegressorModel", 'rb'))
-    arr = np.reshape([(min_temp+max_temp)/2.0, min_temp, max_temp], (1,-1))
-    y_pred = model.predict(arr)
+    arr = np.reshape([(min_temp + max_temp) / 2.0, min_temp, max_temp], (1, -1))
+    y_pred = loaded_model.predict(arr)
     print(y_pred)
     return y_pred
 
+
 if __name__ == '__main__':
-    data = get_data()
-    model, ohe, train_df, test_df, feature_names = get_trained_model(data)
-    predict_for_interactive(100,90)
+    #data = get_data()
+    #model, ohe, train_df, test_df, feature_names = get_trained_model(data)
