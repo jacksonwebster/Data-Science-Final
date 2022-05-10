@@ -1,8 +1,9 @@
-import {useState} from "react";
+import {useEffect, useState} from "react";
 
 
 import MultiRangeSlider from "multi-range-slider-react";
 import "./sliderOverride.css"
+import {Row, Col, } from "react-bootstrap";
 
 const maxPossibleTemp = 130
 const minPossibleTemp = -20
@@ -45,11 +46,25 @@ const heatmap = [
 
 function Predictor() {
 
+    useEffect(() => {
+        let min = document.body.getElementsByClassName("label-min")[0].innerHTML
+        document.body.getElementsByClassName("label-min")[0].innerHTML = min.split("º")[0] + "º"
+        let max = document.body.getElementsByClassName("label-max")[0].innerHTML
+        document.body.getElementsByClassName("label-max")[0].innerHTML = max.split("º")[0] + "º"
+    }, [])
 
+
+
+    let getPrediction = (min, max) => {
+        fetch(`/predict?min=${min}&max=${max}`)
+            .then(response => response.json())
+            .then(data => setPrediction(data.crimes))
+    }
 
     let handleOnChange = (values) => {
         setCurrMin(values.minValue)
         setCurrMax(values.maxValue)
+        getPrediction(values.minValue, values.maxValue)
         setColors(values.minValue, values.maxValue)
     }
 
@@ -74,26 +89,46 @@ function Predictor() {
 
     const [currMin, setCurrMin] = useState(getThirds(1));
     const [currMax, setCurrMax] = useState(getThirds(2));
+    const [prediction, setPrediction] = useState(30)
 
 
     return (
         <>
 
-        <MultiRangeSlider
-            min={minPossibleTemp}
-            max={maxPossibleTemp}
-            step={1}
-            ruler={false}
-            label={true}
-            preventWheel={false}
-            minValue={currMin}
-            maxValue={currMax}
-            onInput={(e) => {
-                handleOnChange(e);
-            }}
-        />
+            <div className="white-transparent p-5 mt-5 align-content-center align-items-center">
+                <Row style={{height: "15vh"}}></Row>
+                <Row>
+                    <Col  className="text-center  prediction-label">
+                        PREDICTED NUMBER OF CRIMES
+                    </Col>
 
+
+                </Row>
+                <Row>
+                    <Col className="text-center prediction">
+                        {prediction}
+                    </Col>
+
+                </Row>
+                <Row>
+                    <Col>
+                        <MultiRangeSlider
+                        min={minPossibleTemp}
+                        max={maxPossibleTemp}
+                        step={1}
+                        ruler={false}
+                        label={true}
+                        preventWheel={false}
+                        minValue={currMin}
+                        maxValue={currMax}
+                        onInput={(e) => {
+                            handleOnChange(e);
+                        }}/>
+                        </Col>
+                 </Row>
+            </div>
         </>
+
 
     );
 }

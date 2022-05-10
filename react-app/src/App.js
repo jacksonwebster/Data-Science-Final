@@ -5,6 +5,7 @@ import predictor from './predictor'
 
 import {Col, Container, Navbar, Row, Nav} from 'react-bootstrap';
 import {useState} from "react";
+import "./bootstrapOverride.css"
 
 
 
@@ -23,10 +24,11 @@ function App() {
   const [currComp, setCurrComp] = useState("predictor");
 
 
+
   return (
-    <div className="App">
-        <Navbar bg="light" expand="md">
-            <Container>
+    <div className="App" >
+        <Navbar bg="light" expand="md" >
+            <Container >
                 <Navbar.Brand >Crime Predictors</Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -37,16 +39,19 @@ function App() {
                 </Navbar.Collapse>
             </Container>
         </Navbar>
-        <Container>
+
+
+        <Container className="bg-image">
             <Row>
-                <Col xs={2} md={3}/>
-                <Col xs={8} md={6}>
+                <Col xs={1} />
+                <Col xs={10} >
                     {currComp === 'poster'? showPoster() : showPredictor()}
 
                 </Col>
-                <Col xs={2} md={3}/>
+                <Col xs={1}/>
             </Row>
         </Container>
+
 
 
 

@@ -1,0 +1,17 @@
+
+:root {
+  --light-blue: rgba(45, 160, 229, 0.3);
+}
+
+
+.bg-light{
+    background-color: var(--light-blue) !important;
+}
+
+.navbar-brand {
+    font-size: 1.5em !important;
+}
+
+.nav-link {
+    font-size: 1.2em !important;
+}

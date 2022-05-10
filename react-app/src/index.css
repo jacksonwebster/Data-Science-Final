@@ -1,8 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,250&family=Secular+One&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto Flex', sans-serif !important;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +10,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+
+
+.prediction-label {
+  font-size: 2em;
+  font-family: 'Secular One', sans-serif;
+}
+
+.prediction{
+  font-size: 4.5em;
+  font-family: 'Secular One', sans-serif;
+  line-height: 125%;
+}
+
+.bg-image{
+  height: 86vh;
+  margin: 1em;
+  border-radius: 10px;
+  background: url("../public/boston-map.jpeg")  no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.white-transparent {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 75vh;
+  border-radius: 10px;
 }
