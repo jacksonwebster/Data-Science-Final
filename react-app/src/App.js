@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css'
+npimport 'bootstrap/dist/css/bootstrap.min.css'
 import 'react-bootstrap'
 import Poster from './poster'
 import predictor from './predictor'

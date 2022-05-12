@@ -21,6 +21,7 @@ def get_data():
 
 
 def get_trained_model(data):
+    print(data)
     ohe = OneHotEncoder(handle_unknown='ignore')
 
     feature_names = [e for e in data.columns if e != "count" and e != "OCCURRED_ON_DATE"]
@@ -54,5 +55,6 @@ def predict_for_interactive(min_temp, max_temp):
 
 
 if __name__ == '__main__':
-    #data = get_data()
-    #model, ohe, train_df, test_df, feature_names = get_trained_model(data)
+    # data = get_data()
+    # model, ohe, train_df, test_df, feature_names = get_trained_model(data)
+    # print(predict_for_interactive(60,70))
