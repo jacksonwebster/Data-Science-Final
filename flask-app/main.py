@@ -53,6 +53,6 @@ def predict_for_interactive(min_temp, max_temp):
     return y_pred
 
 
-if __name__ == '__main__':
-    #data = get_data()
-    #model, ohe, train_df, test_df, feature_names = get_trained_model(data)
+# if __name__ == '__main__':
+#     #data = get_data()
+#     #model, ohe, train_df, test_df, feature_names = get_trained_model(data)

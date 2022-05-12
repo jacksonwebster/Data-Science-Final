@@ -44,7 +44,7 @@ const heatmap = [
 
 
 
-function Predictor(props) {
+function Predictor() {
 
     useEffect(() => {
         let min = document.body.getElementsByClassName("label-min")[0].innerHTML
@@ -93,7 +93,7 @@ function Predictor(props) {
 
 
     return (
-        <div className={props.display}>
+        <div >
             <div className="white-transparent p-5 mt-5 align-content-center align-items-center">
                 <Row style={{height: "15vh"}}></Row>
                 <Row>

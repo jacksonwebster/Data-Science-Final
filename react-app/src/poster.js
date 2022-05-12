@@ -2,16 +2,12 @@ import {useState} from "react";
 import {Container, Row, Col} from "react-bootstrap";
 
 
-function Poster() {
+function Poster(props) {
 
-
-    const [currMin, setCurrMin] = useState(1);
-    const [currMax, setCurrMax] = useState(2);
-    const [prediction, setPrediction] = useState(30)
 
 
     return (
-        <>
+        <div className={props.display} style={{backgroundColor: "White"}}>
             <Row>
                 Crime Predictors
 
@@ -42,7 +38,7 @@ function Poster() {
 
             </Row>
 
-        </>
+        </div>
     );
 }
 
