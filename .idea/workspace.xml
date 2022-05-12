@@ -4,6 +4,12 @@
     <list default="true" id="fe209492-ae8f-4ff4-a642-b56e5785f25a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/react-app/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/App.js" afterDir="false" />
+<<<<<<< HEAD
+=======
+      <change beforePath="$PROJECT_DIR$/react-app/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/poster.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/poster.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/react-app/src/predictor.js" beforeDir="false" afterPath="$PROJECT_DIR$/react-app/src/predictor.js" afterDir="false" />
+>>>>>>> 85cc4f2d524ec6069f0d83f4f0121db854d7aef7
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

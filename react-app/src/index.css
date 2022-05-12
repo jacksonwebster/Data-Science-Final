@@ -41,3 +41,8 @@ code {
   height: 75vh;
   border-radius: 10px;
 }
+
+
+.hide {
+  display: none;
+}
