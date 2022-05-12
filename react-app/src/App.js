@@ -45,7 +45,7 @@ function App() {
             <Row>
                 <Col xs={1} />
                 <Col xs={10} >
-                    {currComp === 'poster'? showPoster() : showPredictor()}
+                    <Poster> </Poster>
 
                 </Col>
                 <Col xs={1}/>
